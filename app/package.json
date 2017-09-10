@@ -1,0 +1,23 @@
+{
+  "name": "elm-react-storybook",
+  "version": "1.0.0",
+  "description": "Demo of using Elm with react-storybook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/fpapado/elm-react-storybook.git"
+  },
+  "author": "fpapado",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/react": "^3.2.8"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
