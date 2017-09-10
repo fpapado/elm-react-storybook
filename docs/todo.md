@@ -4,7 +4,8 @@
   - [X] View function
   - [X] programWithFlags pattern
 - [ ] License
-- [ ] HMR not working
-- [ ] More complex example / alongside working app
-- [ ] Explain logic in README
+- [ ] Reloading not working when changing view file; need to change Storybook/* file instead
+- [ ] More complex example, using decoders
+- [X] Explain logic in README
 - [ ] Abstract into template/write directions
+- [ ] Try alongside real app
