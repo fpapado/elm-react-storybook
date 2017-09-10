@@ -14,9 +14,12 @@
   "author": "fpapado",
   "license": "MIT",
   "devDependencies": {
-    "@storybook/react": "^3.2.8"
+    "@storybook/react": "^3.2.8",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.6"
   },
   "dependencies": {
+    "elm-webpack-loader": "^4.3.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }
