@@ -6,10 +6,13 @@ module.exports = {
       {
         test: /\.elm$/,
         exclude: [/elm-stuff/, /node_modules/],
-        use: {
-          loader: 'elm-webpack-loader',
-          options: {}
-        }
+        use: [
+          'elm-hot-loader',
+          {
+            loader: 'elm-webpack-loader',
+            options: {}
+          }
+        ]
       },
       {
         test: /\.css/,

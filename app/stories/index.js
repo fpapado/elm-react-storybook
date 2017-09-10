@@ -3,11 +3,24 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import Elm from './Elm.js';
-import ComponentApp from '../src/Storybook/Component.elm';
+import CardApp from '../src/Storybook/Card.elm';
 
-const Component = ComponentApp.Storybook.Component;
+import '../src/tachyons.min.css';
 
-storiesOf('Something', module)
-  .add('somestory', () => (
-    // TODO: load Elm
+const Card = CardApp.Storybook.Card;
+
+let entry =
+  { content : "front side"
+    , translation : "back side"
+    , type_ : "entry"
+    , id : "1"
+    , rev : "1"
+  }
+
+storiesOf('Card', module)
+  .add('Card', () => (
+    <Elm src={Card} flags={entry} />
+  ))
+  .add('Other Card', () => (
+    <Elm src={Card} flags={entry} />
   ))

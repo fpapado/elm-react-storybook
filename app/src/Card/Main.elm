@@ -1,6 +1,9 @@
-module Card.Main exposing (Msg, initModel, view, update)
+module Card.Main exposing (Model, Msg, initModel, view, viewEntry, update)
 
-import Data.Entry exposing (Entry)
+import Data.Entry exposing (Entry, EntryLocation)
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (onClick)
 
 
 type alias Model =
@@ -14,9 +17,7 @@ initModel =
 
 initEntry : Entry
 initEntry =
-    { addedAt = Date.fromTime 0
-    , content = ""
-    , location = initLocation
+    { content = ""
     , translation = ""
     , type_ = "entry"
     , id = "1"
@@ -55,9 +56,9 @@ view model =
 viewEntry : Entry -> Html Msg
 viewEntry entry =
     div
-        [ class "dw-panel" ]
+        [ class "dw-panel sans-serif" ]
         [ div
-            [ class "dw-panel__content bg-muted-blue mw5 center br4 pa4 shadow-card" ]
+            [ class "dw-panel__content bg-dark-blue mw5 center br4 pa4 shadow-card" ]
             [ a [ onClick <| DeleteEntry entry.id, class "close handwriting black-70 hover-white" ] [ text "×" ]
             , div [ class "white tl" ]
                 [ h2
@@ -70,10 +71,11 @@ viewEntry entry =
             , hr
                 [ class "w-100 mt4 mb3 bb bw1 b--black-10" ]
                 []
-            , div [ class "white f6 f5-ns" ]
-                [ span [ class "db mb2 tr truncate" ] [ text <| viewDate entry.addedAt ]
-                , span [ class "db mb1 tr truncate" ] [ text <| toString entry.location.latitude ++ ", " ]
-                , span [ class "db tr truncate" ] [ text <| toString entry.location.longitude ]
-                ]
+
+            -- , div [ class "white f6 f5-ns" ]
+            -- [ span [ class "db mb2 tr truncate" ] [ text <| viewDate entry.addedAt ]
+            -- , span [ class "db mb1 tr truncate" ] [ text <| toString entry.location.latitude ++ ", " ]
+            -- , span [ class "db tr truncate" ] [ text <| toString entry.location.longitude ]
+            -- ]
             ]
         ]

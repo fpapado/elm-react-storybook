@@ -1,12 +1,12 @@
 module Data.Entry exposing (..)
 
-import Date exposing (Date)
+-- import Date exposing (Date)
 
 
 type alias Entry =
-    { addedAt : Date
-    , content : String
-    , location : EntryLocation
+    -- { addedAt : Date
+    -- , location : EntryLocation
+    { content : String
     , translation : String
     , type_ : String
     , id : String

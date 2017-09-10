@@ -14,6 +14,11 @@ yarn global add elm
 cd app
 elm-package install
 yarn
-yarn run start-elm
 yarn run storybook
 ```
+
+## How?
+### Custom webpack configuration
+TODO: Expand
+Need to instruct storybook how to load the files.
+Storybook uses webpack, so we can add elm-loader!

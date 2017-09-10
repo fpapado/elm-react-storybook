@@ -1,9 +1,10 @@
 # TODO
 - [X] Add Elm loader
-- [ ] Add concrete example
-  - [ ] View function
-  - [ ] programWithFlags pattern
-- [ ] More complex example
+- [X] Add concrete example
+  - [X] View function
+  - [X] programWithFlags pattern
 - [ ] License
+- [ ] HMR not working
+- [ ] More complex example / alongside working app
 - [ ] Explain logic in README
 - [ ] Abstract into template/write directions
